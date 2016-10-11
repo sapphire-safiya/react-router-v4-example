@@ -1,15 +1,7 @@
 import ReactDOM from 'react-dom'
 import React, { Component } from 'react'
-import { BrowserRouter, Match, Miss, Link } from 'react-router'
-import { Home, About, Topics } from './Components'
-
-
-//import { Provider } from 'react-redux'
-//import { createStore, compose, applyMiddleware } from 'redux'
-//import thunk from 'redux-thunk'
-//Import a reducer that will be used to createStore
-//import { reducer } from './reducers'
-
+import { BrowserRouter, Match, Link } from 'react-router'
+import { Home, BasicRouting, Blocking, Miss, QueryParams, Recursive, Protected, NoMatch } from './Components'
 
 // STEP 01 : Navigating using React Router  
 ReactDOM.render(
@@ -17,24 +9,24 @@ ReactDOM.render(
     <div>
       <ul>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/topics">Topics</Link></li>
+        <li><Link to="/basic-routing">BasicRouting</Link></li>
+        <li><Link to="/blocking">Blocking</Link></li>
+        <li><Link to="/miss">Miss</Link></li>
+        <li><Link to="/query-params">Query Params</Link></li>
+        <li><Link to="/recursive-paths">Recursive Paths</Link></li>
+        <li><Link to="/protected">Protected</Link></li>
       </ul>
 
       <Match exactly pattern="/" component={Home} />
-      <Match pattern="/about" component={About} />
-      <Match pattern="/topics" component={Topics} />
+      <Match pattern="/basic-routing" component={BasicRouting} />
+      <Match pattern="/blocking" component={Blocking} />
+      <Match pattern="/miss" component={Miss} />
+      <Match pattern="/query-params" component={QueryParams} />
+      <Match pattern="/recursive-paths" component={Recursive} />
+      <Match pattern="/protected" component={Protected} />
     </div>
    </BrowserRouter>
   , document.getElementById('main'))
 
-
-// Have client use the initial state defined by the server
-// Use Thunk middleware
-/*const initialState = window.__INITIAL_STATE__
-const store = createStore(reducer, initialState, applyMiddleware(thunk))*/
-/*<Provider store={store}>
-    { routes }
-  </Provider>*/
 
 
