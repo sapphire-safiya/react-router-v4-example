@@ -24,6 +24,10 @@ app.use(webpackDevMiddleware(compiler, {
 app.use(webpackHotMiddleware(compiler))
 delete process.env.BROWSER;
 
+
+app.get('/dist/main.css', function (req, res) {
+  res.sendFile(path.join(__dirname, '/dist/main.css'))
+});
 app.use(requestHandler);
 
 app.listen(port, function (error) {

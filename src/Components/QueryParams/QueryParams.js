@@ -14,12 +14,12 @@ export default class QueryParams extends Component {
       		<li><Link to={{
               pathname: pathname+'/level1',
               query: { abc: 23 }
-            }}>Level 1</Link></li>
+            }} activeClassName="active">Level 1</Link></li>
       		<li><Link to={{
-              pathname: pathname+'/level1',
+              pathname: pathname+'/level2',
               query: { abc: 2, xyz: 4 }
-            }}>Level 2</Link></li>
-      		<li><Link to={pathname+'/level1?xyz=HavingFun'}>Level 3</Link></li>
+            }} activeClassName="active">Level 2</Link></li>
+      		<li><Link to={pathname+'/level3?xyz=HavingFun'} activeClassName="active">Level 3</Link></li>
       	</ul>
       </div>
       <div className="rightContent">

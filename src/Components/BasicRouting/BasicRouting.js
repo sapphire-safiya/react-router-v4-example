@@ -12,9 +12,9 @@ export default class BasicRouting extends Component {
       <p>Select a level from Left Navigation to view the content, also notice the change in URL.</p>
       <div className="leftNavi">
       	<ul>
-      		<li><Link to={pathname +"/level1"}>Level 1</Link></li>
-      		<li><Link to={pathname + "/level2"}>Level 2</Link></li>
-      		<li><Link to={pathname + "/level3"}>Level 3</Link></li>
+      		<li><Link to={pathname +"/level1"} activeClassName="active">Level 1</Link></li>
+      		<li><Link to={pathname + "/level2"} activeClassName="active">Level 2</Link></li>
+      		<li><Link to={pathname + "/level3"} activeClassName="active">Level 3</Link></li>
       	</ul>
       </div>
       <div className="rightContent">

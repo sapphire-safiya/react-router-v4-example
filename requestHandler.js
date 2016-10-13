@@ -14,6 +14,7 @@ function handleRender(req,res) {
 <html>
 <head>
     <title>React Router v4</title>
+    <link href="dist/main.css" media="all" rel="stylesheet" />
 </head>
 <body>
   <div id="main">
