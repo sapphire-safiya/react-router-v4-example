@@ -17,7 +17,6 @@ ReactDOM.render(
         <li><Link to="/recursive-paths" activeClassName="active">Recursive Paths</Link></li>
         <li><Link to="/protected" activeClassName="active">Protected</Link></li>
       </ul>
-      <p>{fakeAuth.isAuthenticated}</p>
       <Match exactly pattern="/" component={Home} />
       <Match pattern="/basic-routing" component={BasicRouting} />
       <Match pattern="/blocking" component={Blocking} />
