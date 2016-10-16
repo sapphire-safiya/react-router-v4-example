@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import fakeAuth from '../../Auth'
+import fakeAuth from '../Auth'
 import { Redirect } from 'react-router'
 
 export default class Login extends Component {

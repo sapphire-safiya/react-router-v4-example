@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Match, Link, Miss } from 'react-router'
-import { Content, NoMatch } from '../../Components'
+import { Content, NoMatch } from '../Components'
 
 export default class BasicRouting extends Component {
   render() {
@@ -19,6 +19,7 @@ export default class BasicRouting extends Component {
       <div className="rightContent">
       	<p>Second Level Content will appear here:</p>
       	<Match pattern={`${pathname}/abc/:level`} component={Content}/>
+        <Match pattern={`${pathname}`} exactly render={() => (null)} />
         <Miss component={NoMatch}/>
       </div>
       </div>

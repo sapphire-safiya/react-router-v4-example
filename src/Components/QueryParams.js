@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Match, Link } from 'react-router'
-import { Content } from '../../Components'
+import { Content } from '../Components'
 
 export default class QueryParams extends Component {
   render() {

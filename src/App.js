@@ -4,7 +4,6 @@ import { BrowserRouter, Match, Link, Redirect } from 'react-router'
 import fakeAuth from './Auth'
 import { Home, BasicRouting, Blocking, Miss, QueryParams, Recursive, Protected, NoMatch, Login } from './Components'
 
-// STEP 01 : Navigating using React Router  
 ReactDOM.render(
   <BrowserRouter>
     <div>
