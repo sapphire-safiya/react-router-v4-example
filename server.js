@@ -21,6 +21,7 @@ delete process.env.BROWSER;
 
 
 app.get('/dist/main.css', function (req, res) {
+<<<<<<< HEAD
   res.sendFile(path.join(__dirname, '/public/main.css'))
 <<<<<<< HEAD
 });
@@ -28,6 +29,9 @@ app.get('*',function(req,res){
   res.sendFile(path.join(__dirname,'index.html'))
 =======
 >>>>>>> 0682ab1d8e6fc138e5b860eb0bddba7aaf553a01
+=======
+  res.sendFile(path.join(__dirname, '/dist/main.css'))
+>>>>>>> d291b46bd59abc3a09a4e7551fb86f360a016c9a
 });
 
 app.listen(port, function (error) {
