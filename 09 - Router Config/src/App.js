@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
 import React, { Component } from 'react'
 import { BrowserRouter, Match, Link } from 'react-router'
-import { Home, BasicRouting, Blocking, Miss, QueryParams } from './Components'
+import { routes } from './router-config'
 
 ReactDOM.render(
   <BrowserRouter>
@@ -12,15 +12,14 @@ ReactDOM.render(
         <li><Link to="/blocking" activeClassName="active">Blocking</Link></li>
         <li><Link to="/miss" activeClassName="active">Miss</Link></li>
         <li><Link to="/query-params" activeClassName="active">Query Params</Link></li>
+        <li><Link to="/recursive-paths" activeClassName="active">Recursive Paths</Link></li>
+        <li><Link to="/protected" activeClassName="active">Protected</Link></li>
       </ul>
-      <Match exactly pattern="/" component={Home} />
-      <Match pattern="/basic-routing" component={BasicRouting} />
-      <Match pattern="/blocking" component={Blocking} />
-      <Match pattern="/miss" component={Miss} />
-      <Match pattern="/query-params" component={QueryParams} />
+      
+      {routes.map((route,index) => (
+        <Match key={index} pattern={route.pattern} component={route.component} exactly={route.exactly} />
+      ))}
+
     </div>
    </BrowserRouter>
   , document.getElementById('main'))
-
-
-

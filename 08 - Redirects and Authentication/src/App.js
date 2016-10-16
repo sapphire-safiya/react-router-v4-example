@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom'
 import React, { Component } from 'react'
 import { BrowserRouter, Match, Link, Redirect } from 'react-router'
 import fakeAuth from './Auth'
-import { Home, BasicRouting, Blocking, Miss, QueryParams, Recursive, Protected, NoMatch, Login } from './Components'
+import { Home, BasicRouting, Blocking, Miss, QueryParams, Recursive, Protected, Login } from './Components'
 
 ReactDOM.render(
   <BrowserRouter>

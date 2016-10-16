@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
 import React, { Component } from 'react'
 import { BrowserRouter, Match, Link } from 'react-router'
-import { Home, BasicRouting, Blocking, Miss, QueryParams, Recursive, NoMatch } from './Components'
+import { Home, BasicRouting, Blocking, Miss, QueryParams, Recursive } from './Components'
 
 ReactDOM.render(
   <BrowserRouter>
